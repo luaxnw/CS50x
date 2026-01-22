@@ -19,21 +19,21 @@
 
 ## IF e ELSE IF
 
-IF: o computador é obrigado a testar todas as condições mesmo que a primeira já tenha sido verdadeira, utilizando processamento à toa.
+*IF*: o computador é obrigado a testar todas as condições mesmo que a primeira já tenha sido verdadeira, utilizando processamento à toa.
 
-if x > y - Testado
+    if x > y - Testado
     
-if x < y - Testado (mesmo se x > y for verdade)
+    if x < y - Testado (mesmo se x > y for verdade)
     
-IF x == y - Testado (mesmo se x > y for verdade)
+    IF x == y - Testado (mesmo se x > y for verdade)
 
-ELSE IF: as condições estão conectadas, então assim que o computador encontra uma solução verdadeira no bloco, ele pula todas as outras. 
+*ELSE IF*: as condições estão conectadas, então assim que o computador encontra uma solução verdadeira no bloco, ele pula todas as outras. 
 
-IF x > y - Testado
-    
-ELSE IF x < y - Só testado se x não for > y
-    
-ELSE IF x == y - Só testado se as anteriores forem falsas
+    IF x > y - Testado
+        
+    ELSE IF x < y - Só testado se x não for > y
+        
+    ELSE IF x == y - Só testado se as anteriores forem falsas
 
 ## Constantes
 Valores que não podem ser alterados. Deve haver declaração no início da variável. Declarada como:
@@ -42,4 +42,4 @@ Valores que não podem ser alterados. Deve haver declaração no início da vari
 
 
 ## Documentos
-    [Manual funções](https://manual.cs50.io/)
+    Manual funções: https://manual.cs50.io/
