@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #include <stdio.h>
 
 int main()
@@ -41,29 +40,4 @@ int main()
 
     return 0;
 }
-=======
-#include <stdio.h>
 
-int main(){
-
-
-	int aux = 4;
-
-	for(int i = 0; i < 4; i++){
-		printf("\n");
-		
-
-		for (int j = aux; j != 4; j++){
-		printf("#");
-		}
-	       	aux--;	
-	}
-
-
-
-	
-
-
-	return 0;	
-}
->>>>>>> 5842cd925266c5e64baa9f423b0ee8e06e0c8d62
