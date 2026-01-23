@@ -48,3 +48,20 @@
     ```
 
 4. Linking: juntar o código principal e as bibliotecas utilizadas. Combinando tudo e gerando um único grupo de binário a partir programa e das bibliotecas.
+
+# Arrays
+
+- Alocação contígua: O sistema reserva um único bloco na memória dependendo do que foi solicitado. Por exemplo, ao solicitar `int array[5]` o computador reserva memória para 5 inteiros juntos (20 bytes).
+
+- Tamanho fixo: Seu tamanho é definido em momento de compilação, não podendo ser alterada durante execução (não dinâmico).
+
+- Ponteiro para primeiro elemento: Um array é armazenado como um ponteiro para seu primeiro elemento, os demais elementos são armazenados contiguamente a partir do índice inicial. Exemplo:
+
+    `c char[10]`
+
+- c funciona como um ponteiro que aponta para a região de memória onde foi alocado esses 10 char. Quando colocamos um índice o computador faz:
+
+    `*(c + 1), *(c + 2), *(c + 3)...`
+    Portanto, avança I posições a partir do ponteiro inicial.
+ 
+
