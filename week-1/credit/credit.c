@@ -11,13 +11,50 @@ int contadorInteiro(long x)
 	return i;
 }
 
+
+
+int verificaCartao(long x)
+{
+	int contadorAux = contadorInteiro(x);
+	int array[contadorAux];
+	int sumPar = 0, sumImpar = 0, j = 0;
+
+	while (x < 0)
+	{
+		j++;
+		array[j] = x % 10;
+		x /= 10;
+	}
+
+	for (int i = contadorAux; i > 0; i)
+	{
+		if (i % 2 == 0)
+		{
+			sumPar += (array[i] * 2);
+		}
+		else 
+		{
+			sumImpar += array[i];
+		}
+	i -= 2;		
+	}
+	if (sumPar + sumImpar == 20)
+		return 1;
+	else
+		return 0;
+}
+
 int main()
 {
 
-	long cardNumber = 370360000000014;
+	long cardNumber = 4003600000000014;
 	int i = 0;
 	int counter = contadorInteiro(cardNumber);
 	int array[counter];
+
+	int teste = verificaCartao(cardNumber);
+
+	printf("Este é o teste ---> %i\n", teste);
 
 	while (cardNumber > 0)
 	{
