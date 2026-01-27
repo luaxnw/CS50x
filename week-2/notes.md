@@ -63,5 +63,16 @@
 
     `*(c + 1), *(c + 2), *(c + 3)...`
     Portanto, avança I posições a partir do ponteiro inicial.
- 
+
+Podemos fazer o mesmo com "strings" (que não existem em C), separando cada char como um elemento de um array, formando uma palavra:
+
+    `char[10] = {"O", "l", "á" ,"," "M" ,"u" ,"n","d","o","!"}`
+
+# Argumentos agrc e argv
+
+São parâmetros inseridos na main que permitem o programa receber argumentos na linha de comando ao ser executado.
+
+O **argc** (argument counter) é um inteiro e possui quantos argumentos serão passados na linha de comando. Sendo no mínimo 1 argumento, pois o nome do programa é contado como primeiro argumento.
+
+O **argv** (argument values) é um ponteiro para uma matriz de strings. Cada string desta matriz é um parâmetro inserido na linha de comando. **argv[0]** sempre aponta para o nome do programa, pois é o primeiro argumento.
 
