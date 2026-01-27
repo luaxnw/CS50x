@@ -19,42 +19,42 @@ int verificaCartao(long x)
 	int array[contadorAux];
 	int sumPar = 0, sumImpar = 0, j = 0;
 
-	while (x < 0)
+	while (x > 0)
 	{
-		j++;
 		array[j] = x % 10;
 		x /= 10;
+		j++;
 	}
 
-	for (int i = contadorAux; i > 0; i)
+	for (int i = 0; i < contadorAux; i++)
 	{
 		if (i % 2 == 0)
 		{
-			sumPar += (array[i] * 2);
+			sumImpar += array[i];
 		}
 		else 
 		{
-			sumImpar += array[i];
-		}
-	i -= 2;		
+			int dobro = array[i] * 2;
+			if (dobro > 9)
+				dobro -= 9;
+
+			sumPar += dobro;
+		}		
 	}
-	if (sumPar + sumImpar == 20)
-		return 1;
-	else
-		return 0;
+	return ((sumPar + sumImpar) % 10 == 0);
 }
 
 int main()
 {
 
-	long cardNumber = 4003600000000014;
+	long cardNumber;
 	int i = 0;
 	int counter = contadorInteiro(cardNumber);
 	int array[counter];
-
 	int teste = verificaCartao(cardNumber);
 
-	printf("Este é o teste ---> %i\n", teste);
+	printf("Informe o número do cartão. \n");
+	scanf("%ld", &cardNumber);
 
 	while (cardNumber > 0)
 	{
@@ -67,6 +67,8 @@ int main()
 	{
 		printf("%i ", array[j]);
 	}
+
+	if (teste == 1){
 
 	switch (counter)
 	{
@@ -105,6 +107,10 @@ int main()
 		}
 		break;
 	}
+	}
+	else
+		printf("\nNão é um cartão. \n");
+
 
 	/* VISA = 13 or 16, MASTERCARD = 16, AMERICAN EXPRESS = 15
 	American Express 34 or 37, MasterCard = 51, 52, 53, 54, or 55
